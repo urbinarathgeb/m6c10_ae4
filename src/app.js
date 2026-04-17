@@ -1,7 +1,8 @@
 import express from 'express';
-import hb from 'hbs';
+import hbs from 'hbs';
 import {fileURLToPath} from 'url';
 import path from 'path';
+import juegosRoutes from './routes/juegos.routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,8 +13,9 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', (res, req) => res.send('API OK'));
+app.get('/', juegosRoutes);
+
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}, http://localhost:${PORT}`));
