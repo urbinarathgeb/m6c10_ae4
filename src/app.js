@@ -16,8 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
-
-app.get('/', juegosRoutes);
+app.use('/', juegosRoutes);
 
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}, http://localhost:${PORT}`));
