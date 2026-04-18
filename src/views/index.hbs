@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../../public/css/main.css">
-	<title>Home</title>
-</head>
-<body>
+<section class="hero">
+	<h1>GameVibe: Catálogo de Reseñas</h1>
+	<p>Descubre tu próxima aventura épica entre nuestra selección de juegos.</p>
+</section>
 
+<div class="container">
+	<div class="games-grid">
 
-</body>
-</html>
+		{{#each juegos}}
+			{{> card this}}
+		{{else}}
+			<div class="empty-state">
+				<p>No se encontraron videojuegos en la base de datos.</p>
+			</div>
+		{{/each}}
+	</div>
+</div>

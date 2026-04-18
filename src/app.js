@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
