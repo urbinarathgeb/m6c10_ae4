@@ -1,17 +1,19 @@
-<section class="hero">
-	<h2>{{title}}</h2>
-	<p>{{description}}</p>
-</section>
-
-<div class="container">
-	<div class="games-grid">
-
-		{{#each games}}
-			{{> card this}}
-		{{else}}
-			<div class="empty-state">
-				<p>No se encontraron videojuegos destacados en la base de datos.</p>
-			</div>
-		{{/each}}
+<section class="container">
+	<div class="hero">
+		<h2>{{title}}</h2>
+		<p>{{description}}</p>
 	</div>
-</div>
+
+	<div class="container">
+		<div class="games-grid">
+
+			{{#each games}}
+				{{> card this}}
+			{{else}}
+				<div class="empty-state">
+					<p>No se encontraron videojuegos destacados en la base de datos.</p>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</section>
