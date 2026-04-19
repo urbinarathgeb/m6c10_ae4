@@ -1,6 +1,6 @@
 <section class="hero">
-	<h1>GameVibe: Catálogo de Reseñas</h1>
-	<p>Descubre tu próxima aventura épica entre nuestra selección de juegos.</p>
+	<h2>{{title}}</h2>
+	<p>{{description}}</p>
 </section>
 
 <div class="container">
@@ -10,7 +10,7 @@
 			{{> card this}}
 		{{else}}
 			<div class="empty-state">
-				<p>No se encontraron videojuegos en la base de datos.</p>
+				<p>No se encontraron videojuegos destacados en la base de datos.</p>
 			</div>
 		{{/each}}
 	</div>
