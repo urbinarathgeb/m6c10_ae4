@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/games', (req, res) => res.render('games', {games: data})
-)
+);
 
 router.get('/games/:id', (req, res) => {
 	const id = parseInt(req.params.id);
@@ -19,6 +19,13 @@ router.get('/games/:id', (req, res) => {
 
 	console.log(game)
 	res.render('game', {game})
+});
+
+router.get('/about', (req, res) => {
+	const data = {
+		name : 'Javier Urbina'
+	}
+	res.render('about', {data});
 })
 
 export default router;
